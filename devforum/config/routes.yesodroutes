@@ -5,7 +5,7 @@
 
 /home          HomeR GET
 
-/register      RegisterR GET 
+/register      RegisterR GET POST
 /login         AuthR GET 
 /posts         PostsR GET 
 
