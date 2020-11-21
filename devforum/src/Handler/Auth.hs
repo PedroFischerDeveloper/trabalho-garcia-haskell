@@ -11,13 +11,12 @@ import Import
 getAuthR :: Handler Html
 getAuthR = defaultLayout $ do
      [whamlet|
-     <div>
-        <h1>Login</h1>
-            <form action="POST">
-                <p>Nome</p>
-                    <input type="text" placeholder="insira seu nome" required/>        
+      <div>
+            <h1>Login</h1>
+                <form action="POST">
+                    <input type="text" name="name" placeholder="insira seu nome" required/>
                         <p>Senha</p>
-                            <input type="password" placeholder="insira sua senha" required/>
+                            <input type="password" name="password" placeholder="insira sua senha" required/>
                 
     |]
 

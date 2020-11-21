@@ -7,6 +7,7 @@
 
 /register      RegisterR GET POST
 /login         AuthR GET 
+/category      CategoryR GET 
 /posts         PostsR GET 
 
 
