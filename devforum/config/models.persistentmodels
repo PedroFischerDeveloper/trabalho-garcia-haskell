@@ -1,0 +1,22 @@
+User
+    ident Text
+    password Text
+    UniqueUsuario ident
+    deriving Typeable
+    deriving Show
+Categoria
+    descricao Text
+    userId UserId
+    deriving Eq
+    deriving Show
+Topico
+    titulo Text
+    mensagem Text
+    userId UserId Maybe
+    deriving Eq
+    deriving Show
+Resposta
+    comentario Text
+    userId UserId Maybe
+    deriving Eq
+    deriving Show
