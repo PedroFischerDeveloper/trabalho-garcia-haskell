@@ -4,14 +4,15 @@
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE TypeFamilies #-}
 {-# LANGUAGE QuasiQuotes #-}
-module Handler.Home where
+module Handler.Register where
 
 import Import
 
-getHomeR :: Handler Html
-getHomeR = defaultLayout $ do
+getRegisterR :: Handler Html
+getRegisterR = defaultLayout $ do
     [whamlet|
         <h1>
-            HOME
-
+            Cadastro de usuário
+            
     |]
+

@@ -4,14 +4,18 @@
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE TypeFamilies #-}
 {-# LANGUAGE QuasiQuotes #-}
-module Handler.Home where
+module Handler.Posts where
 
 import Import
 
-getHomeR :: Handler Html
-getHomeR = defaultLayout $ do
+getPostsR :: Handler Html
+getPostsR = defaultLayout $ do
     [whamlet|
         <h1>
-            HOME
+            Novo Post
 
+            
     |]
+
+
+
