@@ -1,22 +1,23 @@
 User
     ident Text
     password Text
-    UniqueUsuario ident
+    UniqueName ident
     deriving Typeable
     deriving Show
-Categoria
-    descricao Text
+Category
+    description Text
     userId UserId
     deriving Eq
     deriving Show
-Topico
-    titulo Text
-    mensagem Text
+Posts
+    title Text
+    description Text
+    category Category 
     userId UserId Maybe
     deriving Eq
     deriving Show
-Resposta
-    comentario Text
+Comments
+    comments Text
     userId UserId Maybe
     deriving Eq
     deriving Show

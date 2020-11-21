@@ -7,11 +7,12 @@
 module Handler.Home where
 
 import Import
+import Text.Lucius
 
 getHomeR :: Handler Html
-getHomeR = defaultLayout $ do
-    [whamlet|
-        <h1>
-            HOME
+getHomeR = 
+    defaultLayout $ do
+        toWidgetHead $(luciusFile  "templates/home.lucius")
+        $(whamletFile  "templates/home.hamlet")
 
-    |]
+    

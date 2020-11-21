@@ -27,4 +27,3 @@ postRegisterR = defaultLayout $ do
             Cadastro de usuário
             
     |]
-
