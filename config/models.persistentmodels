@@ -1,0 +1,23 @@
+User
+    ident Text
+    password Text
+    UniqueName ident
+    deriving Typeable
+    deriving Show
+Category
+    title Text
+    userId UserId
+    deriving Eq
+    deriving Show
+Posts
+    title Text
+    description Text
+    categoryId CategoryId -- incluindo chave estrangeira de categoria 
+    userId UserId Maybe
+    deriving Eq
+    deriving Show
+Comments
+    comments Text
+    userId UserId Maybe
+    deriving Eq
+    deriving Show

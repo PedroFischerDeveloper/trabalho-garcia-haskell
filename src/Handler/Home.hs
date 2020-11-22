@@ -3,11 +3,25 @@
 {-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE TypeFamilies #-}
+{-# LANGUAGE QuasiQuotes #-}
 module Handler.Home where
 
 import Import
-import Network.HTTP.Types.Status
-import Database.Persist.Postgresql
+import Text.Lucius
 
 getHomeR :: Handler Html
-getHomeR = undefined
+getHomeR = do 
+    categorys <- runDB $ selectList [] [Desc CategoryId]    
+    defaultLayout $ do
+        toWidgetHead $(luciusFile  "templates/home.lucius")
+        $(whamletFile  "templates/home.hamlet")
+  
+
+
+
+
+
+    -- defaultLayout $ do
+    --     toWidgetHead $(luciusFile  "templates/home.lucius")
+    --     $(whamletFile  "templates/home.hamlet")
+  

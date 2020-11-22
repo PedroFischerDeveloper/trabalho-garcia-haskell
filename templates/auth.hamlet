@@ -1,0 +1,3 @@
+<form method=post action=@{AuthR}>
+    ^{formWidget}
+      <button type=submit>Submit

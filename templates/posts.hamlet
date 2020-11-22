@@ -1,0 +1,28 @@
+<div class="bodyForum">  
+    <main class="mainForum">
+        <div class="forumRowHeader">
+            <span class="forumTitle">Postagens
+            <a href=# class="forumBtnNewCategory">
+                <span>Nova categoria
+        <div class="forumTableHeader">
+            <div class="forumColumn">
+                <span>
+                    Categoria
+            <div class="forumColumn">
+                <span>
+                    Posts
+            <div class="forumColumn">
+                <span>
+                    Ultima modificação   
+
+        <div class="forumTableRow">
+            <div class="forumColumn">
+                <a href="#">
+                    <span>aaaa   
+            <div class="forumColumn">
+                    <span>12
+            <div class="forumColumn">
+                    <span>08 setembro            
+        
+           
+          
