@@ -10,7 +10,7 @@
     <main class="mainForum">
         <div class="forumRowHeader">
             <span class="forumTitle">Forum
-            <a href=# class="forumBtnNewCategory">
+            <a  href=@{PostsR} class="forumBtnNewCategory">
                 <span>Nova categoria
         <div class="forumTableHeader">
             <div class="forumColumn">
@@ -22,25 +22,15 @@
             <div class="forumColumn">
                 <span>
                     Ultima modificação   
-           
-                    
 
-        <div class="forumTableRow">
-            <div class="forumColumn">
-                <a href="#">
-                    <span>Tretas de facul    
-            <div class="forumColumn">
-                 <span>8
-            <div class="forumColumn">
-                 <span>20 novembro
-
-        <div class="forumTableRow">
-            <div class="forumColumn">
-                <a href="#">
-                    <span>Futebol    
-            <div class="forumColumn">
-                    <span>12
-            <div class="forumColumn">
-                    <span>08 setembro            
+        $forall Entity pid category <- categorys
+            <div class="forumTableRow">
+                <div class="forumColumn">
+                    <a href=@{PostsR}>
+                        <span>#{categoryTitle category}    
+                <div class="forumColumn">
+                        <span>12
+                <div class="forumColumn">
+                        <span>08 setembro            
            
           

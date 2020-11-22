@@ -10,8 +10,18 @@ import Import
 import Text.Lucius
 
 getHomeR :: Handler Html
-getHomeR = 
+getHomeR = do 
+    categorys <- runDB $ selectList [] [Desc CategoryId]    
     defaultLayout $ do
         toWidgetHead $(luciusFile  "templates/home.lucius")
         $(whamletFile  "templates/home.hamlet")
+  
+
+
+
+
+
+    -- defaultLayout $ do
+    --     toWidgetHead $(luciusFile  "templates/home.lucius")
+    --     $(whamletFile  "templates/home.hamlet")
   

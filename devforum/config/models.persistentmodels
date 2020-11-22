@@ -12,7 +12,7 @@ Category
 Posts
     title Text
     description Text
-    category Category 
+    categoryId CategoryId -- incluindo chave estrangeira de categoria 
     userId UserId Maybe
     deriving Eq
     deriving Show

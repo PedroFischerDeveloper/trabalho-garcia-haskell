@@ -12,7 +12,7 @@ import Import
 authForm :: Form User
 authForm = renderDivs $ User
     <$> areq emailField "email" Nothing
-    <*> areq textField "password" Nothing
+    <*> areq passwordField "password" Nothing
 
 
 getAuthR :: Handler Html
@@ -32,4 +32,23 @@ postAuthR :: Handler Html
 postAuthR = do
     ((result, _), _) <- runFormPost authForm
     case result of
-         FormSuccess user -> redirect HomeR
+         FormSuccess (User email password) -> do 
+             user <- runDB $ getBy (UniqueName email)
+             case user of 
+                 Just (Entity _ (User _ dataBasePass)) -> do
+                     if(password == dataBasePass) then do
+                        setSession "_ID" email 
+                        redirect HomeR
+                     else do 
+                        setMessage [shamlet|
+                           <h1>
+                               WRONG PASSWORD
+                        |]
+                        redirect AuthR
+                 Nothing -> do 
+                     setMessage [shamlet|
+                           <h1>
+                                USER NOT FOUND
+                     |]
+                     redirect AuthR
+         _ -> redirect AuthR
