@@ -7,16 +7,22 @@
 module Handler.Auth where
 
 import Import
+import Text.Lucius
+
+authForm :: Form User
+authForm = renderDivs $ User
+    <$> areq emailField "email" Nothing
+    <*> areq textField "password" Nothing
+
 
 getAuthR :: Handler Html
-getAuthR = defaultLayout $ do
-     [whamlet|
-      <div>
-            <h1>Login</h1>
-                <form action="POST">
-                    <input type="text" name="name" placeholder="insira seu nome" required/>
-                        <p>Senha</p>
-                            <input type="password" name="password" placeholder="insira sua senha" required/>
-                
-    |]
+getAuthR = 
+    defaultLayout $ do
+        toWidgetHead $(luciusFile  "templates/auth.lucius")
+        $(whamletFile  "templates/auth.hamlet")
 
+postAuthR :: Handler Html
+postAuthR = do
+    ((result, _), _) <- runFormPost authForm
+    case result of
+         FormSuccess user -> redirect HomeR
