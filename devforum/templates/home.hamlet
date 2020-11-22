@@ -8,8 +8,10 @@
            Titulo
   
     <main class="mainForum">
-        <h2 class="forumTitle">
-            Forum
+        <div class="forumRowHeader">
+            <span class="forumTitle">Forum
+            <a href=# class="forumBtnNewCategory">
+                <span>Nova categoria
         <div class="forumTableHeader">
             <div class="forumColumn">
                 <span>

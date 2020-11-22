@@ -7,7 +7,7 @@
 module Handler.Auth where
 
 import Import
-import Text.Lucius
+
 
 authForm :: Form User
 authForm = renderDivs $ User
@@ -16,10 +16,17 @@ authForm = renderDivs $ User
 
 
 getAuthR :: Handler Html
-getAuthR = 
-    defaultLayout $ do
-        toWidgetHead $(luciusFile  "templates/auth.lucius")
-        $(whamletFile  "templates/auth.hamlet")
+getAuthR = do
+    (widget, _) <- generateFormPost authForm
+    defaultLayout
+        [whamlet|
+            <form method=post action=@{AuthR}>
+                ^{widget}
+              
+                <button>Submit
+        |]
+
+  
 
 postAuthR :: Handler Html
 postAuthR = do

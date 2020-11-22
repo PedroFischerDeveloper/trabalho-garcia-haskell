@@ -5,7 +5,7 @@ User
     deriving Typeable
     deriving Show
 Category
-    description Text
+    title Text
     userId UserId
     deriving Eq
     deriving Show

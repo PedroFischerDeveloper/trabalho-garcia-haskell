@@ -1,6 +1,3 @@
-<form action=@{AuthR} method="POST">
-
-    <input type="text" name="user">
-    <input type="password" name="password">
-
-    <button type="submit">Envar
+<form method=post action=@{AuthR}>
+    ^{formWidget}
+      <button type=submit>Submit

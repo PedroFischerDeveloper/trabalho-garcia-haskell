@@ -3,12 +3,10 @@
 
 /static StaticR Static appStatic
 
-/home          HomeR GET
+/home                       HomeR GET
+/register                   RegisterR GET POST
+/auth                       AuthR GET POST
 
-/register      RegisterR GET POST
-/auth          AuthR GET
-/category      CategoryR GET 
-/posts         PostsR GET 
 
 
 

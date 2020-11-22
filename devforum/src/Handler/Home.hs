@@ -14,5 +14,4 @@ getHomeR =
     defaultLayout $ do
         toWidgetHead $(luciusFile  "templates/home.lucius")
         $(whamletFile  "templates/home.hamlet")
-
-    
+  

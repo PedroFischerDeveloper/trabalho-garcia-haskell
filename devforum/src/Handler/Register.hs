@@ -7,23 +7,33 @@
 module Handler.Register where
 
 import Import
+import Text.Lucius
+
+registerForm :: Form User
+registerForm = renderDivs $ User
+    <$> areq textField  "email" Nothing
+    <*> areq passwordField "password" Nothing
+
 
 getRegisterR :: Handler Html
-getRegisterR = defaultLayout $ do
-    [whamlet|
-        <div>
-            <h1>Cadastro</h1>
-                <form action="POST">
-                    <input type="text" name="name" placeholder="insira seu nome" required/>
-                        <p>Senha</p>
-                            <input type="password" name="password" placeholder="insira sua senha" required/>
-            
-    |]
+getRegisterR = do
+    (widget, _) <- generateFormPost registerForm
+    defaultLayout
+        [whamlet|
+            <form method=post action=@{RegisterR}>
+                ^{widget}
+              
+                <button>Submit
+        |]
+
+  
 
 postRegisterR :: Handler Html
-postRegisterR = defaultLayout $ do
-    [whamlet|
-        <h1>
-            Cadastro de usuário
-            
-    |]
+postRegisterR = do
+    ((result, _), _) <- runFormPost registerForm
+    case result of
+         FormSuccess user -> do
+             runDB $ insert user
+             redirect HomeR
+         _ -> redirect RegisterR
+
