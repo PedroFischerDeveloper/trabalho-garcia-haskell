@@ -48,6 +48,8 @@ import Handler.Register
 import Handler.Auth
 import Handler.Posts
 import Handler.Category
+import Handler.CategoryNew
+
 
 
 

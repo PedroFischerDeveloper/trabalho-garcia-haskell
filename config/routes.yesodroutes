@@ -7,6 +7,9 @@
 /home                       HomeR GET
 /home/#CategoryId           HomeDeleteR POST
 
+/topic                      TopicR GET
+/topic/new                  TopicNewR POST
+
 
 /posts                      PostsR GET
 /categorys                  CategorysR GET
