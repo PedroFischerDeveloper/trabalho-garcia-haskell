@@ -11,7 +11,7 @@ import Text.Lucius
 
 getHomeR :: Handler Html
 getHomeR = do 
-    posts <- runDB $ selectList [] [Desc PostsId]    
+    categorys <- runDB $ selectList [] [Desc CategoryId]    
     defaultLayout $ do
         toWidgetHead $(luciusFile  "templates/home.lucius")
         $(whamletFile  "templates/home.hamlet")

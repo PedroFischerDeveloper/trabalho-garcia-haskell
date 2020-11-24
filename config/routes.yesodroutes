@@ -5,8 +5,7 @@
 
 
 /home                       HomeR GET
-/home/#PostsId              HomeDeleteR DELETE
-/home/edit/#PostsId         HomeEditR GET
+/home/#CategoryId           HomeDeleteR POST
 
 
 /posts                      PostsR GET

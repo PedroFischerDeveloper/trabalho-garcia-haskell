@@ -4,17 +4,20 @@
             <table class="table">
                 <thead>
                     <th>
+                        <a href="/">NEW
+                    <th>
                         #
                     <th>
                         Title
                     <th>
-                        actions
+                        EDIT
+                    <th>
+                        DELETE
                 <tbody>
-                    $forall Entity pid post <- posts  
+                    $forall Entity pid category <- categorys  
                         <tr>
                             <td>
-                                <a href=@{HomeEditR pid}>
-                                    <span>#{postsTitle post}
+                                <span>#{categoryTitle category}
                             <td>
                                 <form action=@{HomeDeleteR pid} method=post>
                                     <input type="submit" value="X">

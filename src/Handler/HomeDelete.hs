@@ -8,7 +8,7 @@ module Handler.HomeDelete where
 
 import Import
 
-deleteHomeDeleteR :: PostsId -> Handler Html
-deleteHomeDeleteR pid = do 
+postHomeDeleteR :: CategoryId -> Handler Html
+postHomeDeleteR pid = do 
     runDB $ delete pid
     redirect HomeR

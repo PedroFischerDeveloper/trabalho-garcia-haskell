@@ -6,18 +6,17 @@ User
     deriving Show
 Category
     title Text
-    userId UserId
+    userId UserId -- incluindo chave estrangeira de categoria 
     deriving Eq
     deriving Show
-Posts
+Post
     title Text
     description Text
     categoryId CategoryId -- incluindo chave estrangeira de categoria 
-    userId UserId Maybe
     deriving Eq
     deriving Show
 Comments
     comments Text
-    userId UserId Maybe
+    postsId UserId Maybe -- incluindo chave estrangeira de categoria 
     deriving Eq
     deriving Show
