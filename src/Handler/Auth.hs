@@ -20,10 +20,12 @@ getAuthR = do
     (widget, _) <- generateFormPost authForm
     defaultLayout
         [whamlet|
-            <form method=post action=@{AuthR}>
-                ^{widget}
-              
-                <button>Submit
+            <div .container>
+                <div class="page-header">
+                    <h1>Entrar
+                <form method=post action=@{AuthR}>
+                    ^{widget}
+                   <button .btn .btn-primary .btn-block >Submit
         |]
 
   

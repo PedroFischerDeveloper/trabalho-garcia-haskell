@@ -4,17 +4,19 @@
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE TypeFamilies #-}
 {-# LANGUAGE QuasiQuotes #-}
-module Handler.Home where
+module Handler.Category where
 
 import Import
 import Text.Lucius
 
-getHomeR :: Handler Html
-getHomeR = do 
-    posts <- runDB $ selectList [] [Desc PostsId]    
+getCategorysR :: Handler Html
+getCategorysR = do 
+    categorys <- runDB $ selectList [] [Desc CategoryId]
     defaultLayout $ do
-        toWidgetHead $(luciusFile  "templates/home.lucius")
-        $(whamletFile  "templates/home.hamlet")
-  
+        toWidgetHead $(luciusFile  "templates/category.lucius")
+        $(whamletFile  "templates/category.hamlet")
+
+
+
 
   

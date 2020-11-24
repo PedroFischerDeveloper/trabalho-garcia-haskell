@@ -20,10 +20,12 @@ getRegisterR = do
     (widget, _) <- generateFormPost registerForm
     defaultLayout
         [whamlet|
-            <form method=post action=@{RegisterR}>
-                ^{widget}
-              
-                <button>Submit
+            <div .container>
+                <div class="page-header">
+                    <h1>Entrar
+                <form method=post action=@{RegisterR}>
+                    ^{widget}
+                   <button .btn .btn-primary .btn-block >Register
         |]
 
   

@@ -3,10 +3,15 @@
 
 /static StaticR Static appStatic
 
+
 /home                       HomeR GET
+/home/#PostsId              HomeDeleteR DELETE
+/home/edit/#PostsId         HomeEditR GET
+
+
+/posts                      PostsR GET
+/categorys                  CategorysR GET
+
+
 /register                   RegisterR GET POST
 /auth                       AuthR GET POST
-/posts                      PostsR GET
-
-
-

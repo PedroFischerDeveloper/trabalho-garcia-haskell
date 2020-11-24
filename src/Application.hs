@@ -43,9 +43,12 @@ import System.Log.FastLogger                (defaultBufSize, newStdoutLoggerSet,
 
 
 import Handler.Home
+import Handler.HomeEdit
+import Handler.HomeDelete
 import Handler.Register
 import Handler.Auth
 import Handler.Posts
+import Handler.Category
 
 
 

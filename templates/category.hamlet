@@ -1,0 +1,23 @@
+<div>
+    <span>Nova Categoria
+        <form action="" id="form">
+            <label for="title">Nova Categoria:
+            <input type="text" id="title" name="title">
+            <submit type="submit">
+       
+
+    <table>
+        <thead>
+            <th>
+                #
+            <th>
+                Title
+            <th>
+                actions
+        <tbody>
+            $forall Entity pid category <- categorys  
+                <tr>
+                    <td>
+                        #{categoryTitle category} 
+                  
+          

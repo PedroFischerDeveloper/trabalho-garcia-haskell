@@ -1,36 +1,21 @@
-<div class="bodyForum">
-    <header class="headerForum">
-        <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/5/59/Forum_logo.png" 
-            alt="" 
-            class="forumImage">
-        <h1 class="headerTitle">
-           Titulo
-  
-    <main class="mainForum">
-        <div class="forumRowHeader">
-            <span class="forumTitle">Forum
-            <a  href=@{PostsR} class="forumBtnNewCategory">
-                <span>Nova categoria
-        <div class="forumTableHeader">
-            <div class="forumColumn">
-                <span>
-                    Categoria
-            <div class="forumColumn">
-                <span>
-                    Posts
-            <div class="forumColumn">
-                <span>
-                    Ultima modificação   
-
-        $forall Entity pid category <- categorys
-            <div class="forumTableRow">
-                <div class="forumColumn">
-                    <a href=@{PostsR}>
-                        <span>#{categoryTitle category}    
-                <div class="forumColumn">
-                        <span>12
-                <div class="forumColumn">
-                        <span>08 setembro            
-           
-          
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <table class="table">
+                <thead>
+                    <th>
+                        #
+                    <th>
+                        Title
+                    <th>
+                        actions
+                <tbody>
+                    $forall Entity pid post <- posts  
+                        <tr>
+                            <td>
+                                <a href=@{HomeEditR pid}>
+                                    <span>#{postsTitle post}
+                            <td>
+                                <form action=@{HomeDeleteR pid} method=post>
+                                    <input type="submit" value="X">
+                

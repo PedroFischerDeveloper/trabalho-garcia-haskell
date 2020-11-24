@@ -1,28 +1,15 @@
-<div class="bodyForum">  
-    <main class="mainForum">
-        <div class="forumRowHeader">
-            <span class="forumTitle">Postagens
-            <a href=# class="forumBtnNewCategory">
-                <span>Nova categoria
-        <div class="forumTableHeader">
-            <div class="forumColumn">
-                <span>
-                    Categoria
-            <div class="forumColumn">
-                <span>
-                    Posts
-            <div class="forumColumn">
-                <span>
-                    Ultima modificação   
+<div>
+    <span>Nova Postagem
+        <form action="" id="form">
+            <label for="fname">Novo Post:
+            <input type="text" id="fname" name="name">
+            <submit type="submit">
 
-        <div class="forumTableRow">
-            <div class="forumColumn">
-                <a href="#">
-                    <span>aaaa   
-            <div class="forumColumn">
-                    <span>12
-            <div class="forumColumn">
-                    <span>08 setembro            
+    <label for="cars">Categoria
+        <select id="cars" name="list" form="form">
+            <option value="1">Tecnologia
+            <option value="2">Trabalho
+            <option value="3">Trends
         
            
           
