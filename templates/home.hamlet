@@ -3,21 +3,22 @@
         <div class="panel-heading">
             <table class="table">
                 <thead>
-                    <th scope="col">
-                        <a href=@{TopicR}>NEW TOPIC
-                    <th>
-                        \#
-                    <th>
-                        Title
-                    <th>
-                        EDIT
-                    <th>
-                        DELETE
+                    <tr>
+                        <th scope="col">
+                            <a href=@{TopicR}>NEW TOPIC
+                        <th>
+                            Title
+                        <th>
+                            Remove
                 <tbody>
                     $forall Entity pid category <- categorys  
                         <tr>
-                            <td scope="row">
-                                <span>#{categoryTitle category}
+                            <th>
+                                \#
+                            <td>
+                                <span>
+                                    <a href=@{PostsR pid}>
+                                        #{categoryTitle category}
                             <td>
                                 <form action=@{HomeDeleteR pid} method=post>
                                     <input type="submit" value="X">

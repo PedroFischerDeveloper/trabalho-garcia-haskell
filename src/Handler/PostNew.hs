@@ -37,10 +37,10 @@ getPostNewR = do
 
 postPostNewR :: Handler Html
 postPostNewR = do
-    categories  <- runDB $ selectList [] [] 
+    categories <- runDB $ selectList [] [] 
     ((result, _), _) <- runFormPost $ postForm $ mapCategories categories
     case result of
          FormSuccess newpost -> do 
              _ <- runDB $ insert400 newpost
-             redirect HomeR -- TODO: Enviar para listagem de posts
+             redirect HomeR 
          _ -> redirect AuthR

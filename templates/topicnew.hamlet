@@ -1,5 +1,8 @@
 <div>
-    <form action=@{TopicR} method=post>
-      ^{widget}
-      <input type="submit" value="Cadastrar">
-          
+    <a href=@{HomeR}>Home
+    <a href=@{PostNewR}>Cadastrar Post
+        
+<form action=@{TopicR} method=post>
+^{widget}
+<input type="submit" value="Cadastrar">
+    

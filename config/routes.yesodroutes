@@ -8,6 +8,7 @@
 /home/#CategoryId           HomeDeleteR POST
 /topic                      TopicR GET POST
 
+/posts/show/#CategoryId     PostsR   GET
 /posts/new                  PostNewR GET POST
 
 /register                   RegisterR GET POST
