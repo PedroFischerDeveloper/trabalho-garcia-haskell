@@ -8,15 +8,15 @@
                             <a href=@{CommentNewR postId}>NEW COMMENT
                         <th>
                             Description
-                        <th>
-                            Remove
                 <tbody>
                     $forall Entity commentId comment <- comments
                         <tr>
                             <td>
-                                /
+
                             <td>
                                 #{commentDescription comment}
-                            <td>
-
+            <div>
+                <span>
+                    <a href=@{HomeR}>
+                        Voltar
                 

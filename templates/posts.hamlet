@@ -4,6 +4,10 @@
 $if length posts == 0
     <p> 
         Não existem posts no momento
+    <div>
+        <span>
+            <a href=@{HomeR}>
+                Voltar
 $else
     <table .table.table-striped.table-hover >
         <thead>
@@ -23,3 +27,7 @@ $else
                         #{postDescription post} 
                     <td>
                         <a href=@{CommentR postid}>Ver comentários
+    <div>
+        <span>
+            <a href=@{HomeR}>
+                Voltar
