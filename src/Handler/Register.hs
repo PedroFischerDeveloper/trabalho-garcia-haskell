@@ -8,11 +8,12 @@ module Handler.Register where
 
 import Import
 import Text.Lucius
+import Yesod.Form.Bootstrap3 (BootstrapFormLayout (..), renderBootstrap3)
 
 registerForm :: Form User
-registerForm = renderDivs $ User
-    <$> areq textField  "email" Nothing
-    <*> areq passwordField "password" Nothing
+registerForm = renderBootstrap3 BootstrapBasicForm $ User
+    <$> areq textField  (FieldSettings "Usuário" Nothing Nothing Nothing [("class", "form-control")]) Nothing
+    <*> areq passwordField (FieldSettings "Senha" Nothing Nothing Nothing [("class", "form-control")]) Nothing
 
 
 getRegisterR :: Handler Html
@@ -22,7 +23,7 @@ getRegisterR = do
         [whamlet|
             <div .container>
                 <div class="page-header">
-                    <h1>Entrar
+                    <h1>Cadastre-se
                 <form method=post action=@{RegisterR}>
                     ^{widget}
                    <button .btn .btn-primary .btn-block >Register

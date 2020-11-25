@@ -1,20 +1,18 @@
-<div class="container">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <table class="table">
-                <thead>
+<a href=@{TopicR} .btn.btn-primary.pull-right style="margin-bottom: 20px">
+    Nova Categoria
+
+<div .panel.panel-default">
+    <div .panel-heading">
+        <table .table.table-striped.table-hover>
+            <thead>
+                <tr>
+                    <th>
+                        Categorias
+            <tbody>
+                $forall Entity pid category <- categorys  
                     <tr>
-                        <th scope="col">
-                            <a href=@{TopicR}>NEW TOPIC
-                        <th>
-                            Title
-                <tbody>
-                    $forall Entity pid category <- categorys  
-                        <tr>
-                            <th>
-                                \#
-                            <td>
-                                <span>
-                                    <a href=@{PostsR pid}>
-                                        #{categoryTitle category}
+                        <td>
+                            <span>
+                                <a href=@{PostsR pid}>
+                                    #{categoryTitle category}
                 

@@ -7,13 +7,13 @@
 module Handler.Auth where
 
 import Import
+import Yesod.Form.Bootstrap3 (BootstrapFormLayout (..), renderBootstrap3)
 
 
 authForm :: Form User
-authForm = renderDivs $ User
-    <$> areq textField "user" Nothing
-    <*> areq passwordField "password" Nothing
-
+authForm = renderBootstrap3 BootstrapBasicForm $ User
+    <$> areq textField (FieldSettings "Usuário" Nothing Nothing Nothing [("class", "form-control")]) Nothing
+    <*> areq passwordField (FieldSettings "Senha" Nothing Nothing Nothing [("class", "form-control")]) Nothing
 
 getAuthR :: Handler Html
 getAuthR = do

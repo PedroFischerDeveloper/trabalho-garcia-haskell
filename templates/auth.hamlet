@@ -1,7 +1,11 @@
-<div .container>
-  <div class="page-header">
-    <h1>Entrar
-      
-  <form method=post action=@{AuthR}>
+<div class="container">
+
+  <div class="headerForum">
+    <h1>Login
+    <a href=@{RegisterR}>Novo Cadastro
+
+  <form method=post action=@{AuthR} .bodyForum>
       ^{formWidget}
-      <button .btn .btn-primary .btn-block type=submit>Submit
+      <button .btn.btn-primary.btn-block type=submit>Submit
+
+ 

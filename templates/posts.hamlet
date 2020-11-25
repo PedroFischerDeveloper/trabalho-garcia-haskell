@@ -1,5 +1,8 @@
 <h1>
-    Posts
+    Postagens
+
+    
+        <a href=@{PostNewR}>Criar Postagem
 
 $if length posts == 0
     <p> 

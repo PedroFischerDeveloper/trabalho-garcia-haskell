@@ -5,7 +5,7 @@
                 <thead>
                     <tr>
                         <th scope="col">
-                            <a href=@{CommentNewR postId}>NEW COMMENT
+                            <a href=@{CommentNewR postId}>Criar comentário
                         <th>
                             Description
                 <tbody>
