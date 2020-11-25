@@ -15,8 +15,9 @@ Post
     categoryId CategoryId -- incluindo chave estrangeira de categoria 
     deriving Eq
     deriving Show
-Comments
-    comments Text
-    postsId UserId Maybe -- incluindo chave estrangeira de categoria 
+Comment
+    description Text
+    post PostId -- incluindo chave estrangeira de categoria 
+    user UserId
     deriving Eq
     deriving Show

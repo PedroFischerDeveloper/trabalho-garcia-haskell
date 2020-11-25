@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            <a href=@{CommentNewR postId}>NEW COMMENT
+                        <th>
+                            Description
+                        <th>
+                            Remove
+                <tbody>
+                    $forall Entity commentId comment <- comments
+                        <tr>
+                            <td>
+                                /
+                            <td>
+                                #{commentDescription comment}
+                            <td>
+
+                

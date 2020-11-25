@@ -5,11 +5,13 @@
 
 
 /home                       HomeR GET
-/home/#CategoryId           HomeDeleteR POST
 /topic                      TopicR GET POST
 
 /posts/show/#CategoryId     PostsR   GET
 /posts/new                  PostNewR GET POST
+
+/comment/show/#PostId       CommentR GET
+/comment/new/#PostId        CommentNewR GET POST
 
 /register                   RegisterR GET POST
 

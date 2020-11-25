@@ -8,8 +8,6 @@
                             <a href=@{TopicR}>NEW TOPIC
                         <th>
                             Title
-                        <th>
-                            Remove
                 <tbody>
                     $forall Entity pid category <- categorys  
                         <tr>
@@ -19,7 +17,4 @@
                                 <span>
                                     <a href=@{PostsR pid}>
                                         #{categoryTitle category}
-                            <td>
-                                <form action=@{HomeDeleteR pid} method=post>
-                                    <input type="submit" value="X">
                 

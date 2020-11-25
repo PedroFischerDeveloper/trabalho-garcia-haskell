@@ -42,13 +42,15 @@ import System.Log.FastLogger                (defaultBufSize, newStdoutLoggerSet,
 -- Don't forget to add new modules to your cabal file!
 
 import Handler.Home
-import Handler.HomeDelete
+
 import Handler.Register
 import Handler.Auth
 import Handler.Posts
+import Handler.Comment
 
 import Handler.Topic
 import Handler.PostNew
+import Handler.CommentNew
 
 -- This line actually creates our YesodDispatch instance. It is the second half
 -- of the call to mkYesodData which occurs in Foundation.hs. Please see the
