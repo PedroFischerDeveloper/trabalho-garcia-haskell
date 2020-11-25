@@ -6,7 +6,7 @@
                     <th scope="col">
                         <a href=@{TopicR}>NEW TOPIC
                     <th>
-                        #
+                        \#
                     <th>
                         Title
                     <th>
