@@ -11,4 +11,5 @@
 /posts/new                  PostNewR GET POST
 
 /register                   RegisterR GET POST
-/auth                       AuthR GET POST
+
+/                           AuthR GET POST
