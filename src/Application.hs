@@ -47,8 +47,7 @@ import Handler.HomeDelete
 import Handler.Register
 import Handler.Auth
 import Handler.Posts
-import Handler.Category
-import Handler.CategoryNew
+import Handler.Topic
 
 
 

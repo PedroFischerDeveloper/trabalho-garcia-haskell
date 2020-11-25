@@ -1,0 +1,5 @@
+<div>
+    <form action=@{TopicR} method=post>
+      ^{widget}
+      <input type="submit" value="Cadastrar">
+          

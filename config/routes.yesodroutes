@@ -6,14 +6,9 @@
 
 /home                       HomeR GET
 /home/#CategoryId           HomeDeleteR POST
-
-/topic                      TopicR GET
-/topic/new                  TopicNewR POST
-
+/topic                      TopicR GET POST
 
 /posts                      PostsR GET
-/categorys                  CategorysR GET
-
 
 /register                   RegisterR GET POST
 /auth                       AuthR GET POST

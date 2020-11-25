@@ -3,7 +3,7 @@
         <div class="panel-heading">
             <table class="table">
                 <thead>
-                    <th>
+                    <th scope="col">
                         <a href=@{TopicR}>NEW TOPIC
                     <th>
                         #
@@ -16,7 +16,7 @@
                 <tbody>
                     $forall Entity pid category <- categorys  
                         <tr>
-                            <td>
+                            <td scope="row">
                                 <span>#{categoryTitle category}
                             <td>
                                 <form action=@{HomeDeleteR pid} method=post>

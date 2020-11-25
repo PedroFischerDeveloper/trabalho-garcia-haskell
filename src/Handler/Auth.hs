@@ -11,7 +11,7 @@ import Import
 
 authForm :: Form User
 authForm = renderDivs $ User
-    <$> areq emailField "email" Nothing
+    <$> areq textField "user" Nothing
     <*> areq passwordField "password" Nothing
 
 
