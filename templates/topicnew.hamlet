@@ -1,8 +1,0 @@
-<div>
-    <a href=@{HomeR}>Home
-    
-        
-<form action=@{TopicR} method=post>
-^{widget}
-<input type="submit"  .btn .btn-success value="Cadastrar">
-    

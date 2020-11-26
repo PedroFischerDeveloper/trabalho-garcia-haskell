@@ -29,8 +29,16 @@ getTopicR = do
             case muserdata of
                 Just (Entity _ (User name _)) -> do
                     defaultLayout $ do
-                        setTitle "Cadastrar novo Tópico"
-                        $(widgetFile "topicnew")
+                        [whamlet|
+                            <div .container>
+                                <div class="page-header">
+                                    <a href=@{HomeR}>
+                                        Voltar
+                                    <h1>Criar nova Categoria
+                                <form method=post action=@{TopicR}>
+                                    ^{widget}
+                                    <input type=submit .btn.btn-success.btn-block style="margin-top: 20px">
+                        |]
                 Nothing -> redirect HomeR
         Nothing -> redirect HomeR
 
@@ -50,25 +58,3 @@ postTopicR = do
                         Nothing -> redirect HomeR
                 Nothing -> redirect HomeR
         _ -> redirect TopicR
--- do
--- ((result, _), _) <- runFormPost formCategory
--- case result of
---     FormSuccess category -> do
---         case category of
---             Just _ -> redirect TopicNewR
---             Nothing -> do
---                 _ <- runDB $ insert400 (Book (newBookName book) (newBookISBN book) (newBookNumberPages book) (newBookCategory book))
---                 redirect HomeR
---     _ -> redirect TopicNewR
-    
--- do
--- ((result, _), _) <- runFormPost formCategory
--- case result of
---     FormSuccess category -> do
---         case category of
---             Just _ -> redirect TopicNewR
---             Nothing -> do
---                 _ <- runDB $ insert400 (Book (newBookName book) (newBookISBN book) (newBookNumberPages book) (newBookCategory book))
---                 redirect HomeR
---     _ -> redirect TopicNewR
-    
