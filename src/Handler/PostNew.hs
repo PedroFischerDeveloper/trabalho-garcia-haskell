@@ -11,9 +11,9 @@ import Import
 
 postForm :: [(Text, Key Category)] -> Form Post
 postForm categories = renderDivs $ Post
-  <$> areq textField "Título do post" Nothing
-  <*> areq textField "Descrição do post" Nothing
-  <*> areq (selectFieldList categories) "Categoria" Nothing
+  <$> areq textField (FieldSettings "Título do post" Nothing Nothing Nothing [("class", "form-control")]) Nothing
+  <*> areq textField (FieldSettings "Descrição do post" Nothing Nothing Nothing [("class", "form-control")]) Nothing
+  <*> areq (selectFieldList categories) (FieldSettings "Categoria" Nothing Nothing Nothing [("class", "form-control")]) Nothing
 
 mapCategories :: [Entity Category] -> [(Text, Key Category)]
 mapCategories [] = []
@@ -27,10 +27,12 @@ getPostNewR = do
         [whamlet|
             <div .container>
                 <div class="page-header">
+                    <a href=@{HomeR}>
+                        Voltar
                     <h1>Criar novo post
                 <form method=post action=@{PostNewR}>
                     ^{widget}
-                   <input type=submit .btn.btn-primary.btn-block>
+                   <input type=submit .btn.btn-success.btn-block style="margin-top: 20px">
         |]
 
   

@@ -63,7 +63,7 @@ instance Yesod App where
                 [ NavbarLeft $ MenuItem
                     { menuItemLabel = "Home"
                     , menuItemRoute = HomeR
-                    , menuItemAccessCallback = True
+                    , menuItemAccessCallback = isNothing muser
                     }
                 , NavbarRight $ MenuItem
                     { menuItemLabel = "Login"

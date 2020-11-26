@@ -13,7 +13,7 @@ data CommentRegular = CommentRegular { description :: Text }
 
 commentForm :: Form CommentRegular
 commentForm = renderDivs $ CommentRegular
-  <$> areq textField "Comentario" Nothing
+  <$> areq textField  (FieldSettings "Comentario" Nothing Nothing Nothing [("class", "form-control")]) Nothing
 
 getCommentNewR :: Key Post -> Handler Html
 getCommentNewR postId = do
@@ -22,10 +22,12 @@ getCommentNewR postId = do
         [whamlet|
             <div .container>
                 <div class="page-header">
-                    <h1>Criar novo post
+                    <a href=@{HomeR}>
+                        Voltar
+                    <h1>Criar comentário
                 <form method=post action=@{CommentNewR postId}>
                     ^{widget}
-                   <input type=submit .btn.btn-primary.btn-block>
+                   <input type=submit .btn.btn-success.btn-block style="margin-top: 20px">
         |]
 
   

@@ -1,14 +1,10 @@
-<h1>
-    Postagens
-
-    
-        <a href=@{PostNewR}>Criar Postagem
-
+<div .btnNewPost .btn .btn-success>
+    <a .btnNewPost href=@{PostNewR}>Criar Postagem
 $if length posts == 0
     <p> 
         Não existem posts no momento
     <div>
-        <span>
+        <span>'
             <a href=@{HomeR}>
                 Voltar
 $else

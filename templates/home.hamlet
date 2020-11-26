@@ -1,4 +1,4 @@
-<a href=@{TopicR} .btn.btn-primary.pull-right style="margin-bottom: 20px">
+<a href=@{TopicR} .btn.btn-success.pull-right style="margin-bottom: 20px">
     Nova Categoria
 
 <div .panel.panel-default">

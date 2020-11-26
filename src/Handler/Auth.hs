@@ -25,7 +25,7 @@ getAuthR = do
                     <h1>Entrar
                 <form method=post action=@{AuthR}>
                     ^{widget}
-                   <button .btn .btn-primary .btn-block >Submit
+                   <button .btn .btn-success .btn-block >Submit
         |]
 
   
