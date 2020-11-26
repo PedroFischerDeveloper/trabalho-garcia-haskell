@@ -4,7 +4,7 @@ $if length posts == 0
     <p> 
         Não existem posts no momento
     <div>
-        <span>'
+        <span>
             <a href=@{HomeR}>
                 Voltar
 $else
