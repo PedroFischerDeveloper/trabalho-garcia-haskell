@@ -26,7 +26,7 @@ getRegisterR = do
                     <h1>Cadastre-se
                 <form method=post action=@{RegisterR}>
                     ^{widget}
-                   <button .btn .btn-primary .btn-block >Register
+                   <button .btn .btn-success .btn-block >Register
         |]
 
   
