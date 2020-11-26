@@ -1,22 +1,24 @@
-<div class="container">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">
-                            <a href=@{CommentNewR postId}>Criar comentário
-                        <th>
-                            Description
-                <tbody>
-                    $forall Entity commentId comment <- comments
-                        <tr>
-                            <td>
-
-                            <td>
-                                #{commentDescription comment}
-            <div>
-                <span>
-                    <a href=@{HomeR}>
-                        Voltar
-                
+<div .btnNewPost .btn .btn-success>
+    <a .btnNewPost href=@{CommentNewR postId}>Criar Comentario
+$if length comments == 0
+    <p> 
+        Não existem comentarios no momento
+    <div>
+        <span>
+            <a href=@{HomeR}>
+                Voltar
+$else
+    <table .table.table-striped.table-hover >
+        <thead>
+            <tr>
+                <th>
+                    Descricao
+        <tbody>
+            $forall Entity commentId comment <- comments
+                <tr>
+                    <td>
+                        #{commentDescription comment}
+    <div>
+        <span>
+            <a href=@{HomeR}>
+                Voltar
